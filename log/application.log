@@ -1,0 +1,72 @@
+2021-11-22 16:55:01.132  INFO 24444 --- [main] com.bluescript.demo.lgacdb01Main         : Starting lgacdb01Main using Java 14 on LAPTOP-1RPTTI2Q with PID 24444 (D:\BLUESCRIPT_DEMO\End-2-EndTestData\JavaMicroservices\Customer\lgacdb01_SBT\target\classes started by jarvi in d:\BLUESCRIPT_DEMO\End-2-EndTestData\JavaMicroservices\Customer\lgacdb01_SBT)
+2021-11-22 16:55:01.137  INFO 24444 --- [main] com.bluescript.demo.lgacdb01Main         : No active profile set, falling back to default profiles: default
+2021-11-22 16:55:02.015  INFO 24444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-22 16:55:02.130  INFO 24444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 1 JPA repository interfaces.
+2021-11-22 16:55:02.563  INFO 24444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7082 (http)
+2021-11-22 16:55:02.571  INFO 24444 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-22 16:55:02.571  INFO 24444 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-11-22 16:55:02.668  INFO 24444 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-22 16:55:02.668  INFO 24444 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1498 ms
+2021-11-22 16:55:02.805  INFO 24444 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-22 16:55:02.862  INFO 24444 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-11-22 16:55:02.982  INFO 24444 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-22 16:55:03.064  INFO 24444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-22 16:55:03.207  INFO 24444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-22 16:55:03.222  INFO 24444 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-11-22 16:55:03.731 DEBUG 24444 --- [main] org.hibernate.SQL                        : 
+    
+    create table customer (
+       customernumber integer not null,
+        dateofbirth varchar(255),
+        emailaddress varchar(255),
+        firstname varchar(255),
+        housename varchar(255),
+        housenumber varchar(255),
+        lastname varchar(255),
+        phonehome varchar(255),
+        phonemobile varchar(255),
+        postcode varchar(255),
+        primary key (customernumber)
+    )
+2021-11-22 16:55:03.736  INFO 24444 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-22 16:55:03.743  INFO 24444 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-22 16:55:04.185  WARN 24444 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-22 16:55:04.417  INFO 24444 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-22 16:55:04.664  INFO 24444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7082 (http) with context path ''
+2021-11-22 16:55:04.949  INFO 24444 --- [main] com.bluescript.demo.lgacdb01Main         : Started lgacdb01Main in 4.069 seconds (JVM running for 4.476)
+2021-11-22 17:11:23.175  INFO 15904 --- [main] com.bluescript.demo.lgacdb01Main         : Starting lgacdb01Main using Java 14 on LAPTOP-1RPTTI2Q with PID 15904 (D:\BLUESCRIPT_DEMO\End-2-EndTestData\JavaMicroservices\Customer\lgacdb01_SBT\target\classes started by jarvi in d:\BLUESCRIPT_DEMO\End-2-EndTestData\JavaMicroservices\Customer\lgacdb01_SBT)
+2021-11-22 17:11:23.177  INFO 15904 --- [main] com.bluescript.demo.lgacdb01Main         : No active profile set, falling back to default profiles: default
+2021-11-22 17:11:23.889  INFO 15904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-22 17:11:23.997  INFO 15904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 1 JPA repository interfaces.
+2021-11-22 17:11:24.574  INFO 15904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7082 (http)
+2021-11-22 17:11:24.583  INFO 15904 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-22 17:11:24.590  INFO 15904 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-11-22 17:11:24.699  INFO 15904 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-22 17:11:24.715  INFO 15904 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1505 ms
+2021-11-22 17:11:24.834  INFO 15904 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-22 17:11:24.898  INFO 15904 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-11-22 17:11:25.018  INFO 15904 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-22 17:11:25.108  INFO 15904 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-22 17:11:25.241  INFO 15904 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-22 17:11:25.260  INFO 15904 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-11-22 17:11:25.838 DEBUG 15904 --- [main] org.hibernate.SQL                        : 
+    
+    create table customer (
+       customernumber integer not null,
+        dateofbirth varchar(255),
+        emailaddress varchar(255),
+        firstname varchar(255),
+        housename varchar(255),
+        housenumber varchar(255),
+        lastname varchar(255),
+        phonehome varchar(255),
+        phonemobile varchar(255),
+        postcode varchar(255),
+        primary key (customernumber)
+    )
+2021-11-22 17:11:25.858  INFO 15904 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-22 17:11:25.868  INFO 15904 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-22 17:11:26.296  WARN 15904 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-22 17:11:26.515  INFO 15904 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-22 17:11:26.719  INFO 15904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7082 (http) with context path ''
+2021-11-22 17:11:26.934  INFO 15904 --- [main] com.bluescript.demo.lgacdb01Main         : Started lgacdb01Main in 4.001 seconds (JVM running for 4.401)

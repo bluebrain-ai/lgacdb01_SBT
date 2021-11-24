@@ -1,0 +1,187 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.bluescript.demo:lgacdb01 >--------------------
+[INFO] Building lgacdb01 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ lgacdb01 ---
+[INFO] 
+[INFO] --- formatter-maven-plugin:2.14.0:format (default) @ lgacdb01 ---
+[INFO] Using 'UTF-8' encoding to format source files.
+[INFO] Number of files to be formatted: 9
+[INFO] Successfully formatted:          8 file(s)
+[INFO] Fail to format:                  0 file(s)
+[INFO] Skipped:                         1 file(s)
+[INFO] Read only skipped:               0 file(s)
+[INFO] Approximate time taken:          0s
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ lgacdb01 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.2:compile (default-compile) @ lgacdb01 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to D:\BLUESCRIPT_DEMO\End-2-EndTestData\JavaMicroservices\lgacdb01_SBT\target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[15,21] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[15,33] = expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[15,41] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,2] = expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,160] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,171] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,204] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,215] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,242] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,253] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,281] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,292] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,325] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,336] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,368] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,379] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,414] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,425] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,461] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,472] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,509] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,520] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[82,18] ')' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[82,26] not a statement
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[82,30] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[86,15] not a statement
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[86,88] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[86,140] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[86,154] ')' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[86,162] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[86,158] variable declaration not allowed here
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[86,183] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[94,177] ')' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[96,33] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[98,171] ')' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[100,33] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[120,25] ')' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[120,26] unclosed string literal
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[147,8] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[151,2] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[153,7] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[156,2] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[159,2] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[161,9] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[163,2] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[165,1] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[165,43] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[165,86] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[166,99] <identifier> expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[166,129] <identifier> expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[167,10] <identifier> expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[168,2] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[168,19] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[168,33] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[169,1] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[169,12] <identifier> expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[174,97] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[174,98] <identifier> expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[174,127] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[174,128] <identifier> expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[174,133] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[176,33] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[181,97] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[181,98] <identifier> expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[181,127] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[181,128] <identifier> expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[181,133] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[183,33] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[189,10] <identifier> expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[189,11] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[193,1] class, interface, or enum expected
+[INFO] 71 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.954 s
+[INFO] Finished at: 2021-11-20T23:45:39+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.6.2:compile (default-compile) on project lgacdb01: Compilation failure: Compilation failure: 
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[15,21] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[15,33] = expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[15,41] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,2] = expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,160] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,171] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,204] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,215] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,242] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,253] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,281] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,292] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,325] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,336] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,368] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,379] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,414] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,425] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,461] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,472] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,509] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/jpa/IInsertCustomerJpa.java:[16,520] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[82,18] ')' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[82,26] not a statement
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[82,30] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[86,15] not a statement
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[86,88] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[86,140] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[86,154] ')' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[86,162] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[86,158] variable declaration not allowed here
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[86,183] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[94,177] ')' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[96,33] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[98,171] ')' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[100,33] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[120,25] ')' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[120,26] unclosed string literal
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[147,8] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[151,2] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[153,7] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[156,2] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[159,2] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[161,9] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[163,2] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[165,1] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[165,43] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[165,86] class, interface, or enum expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[166,99] <identifier> expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[166,129] <identifier> expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[167,10] <identifier> expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[168,2] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[168,19] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[168,33] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[169,1] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[169,12] <identifier> expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[174,97] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[174,98] <identifier> expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[174,127] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[174,128] <identifier> expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[174,133] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[176,33] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[181,97] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[181,98] <identifier> expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[181,127] illegal start of expression
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[181,128] <identifier> expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[181,133] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[183,33] ';' expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[189,10] <identifier> expected
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[189,11] illegal start of type
+[ERROR] /D:/BLUESCRIPT_DEMO/End-2-EndTestData/JavaMicroservices/lgacdb01_SBT/src/main/java/com/bluescript/demo/Lgacdb01.java:[193,1] class, interface, or enum expected
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
