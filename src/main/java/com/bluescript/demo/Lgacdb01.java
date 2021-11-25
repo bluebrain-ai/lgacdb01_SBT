@@ -55,7 +55,7 @@ import com.bluescript.demo.model.Dfhcommarea;
         @io.swagger.annotations.ApiResponse(code = 400, message = "This is a bad request, please follow the API documentation for the proper request format"),
         @io.swagger.annotations.ApiResponse(code = 401, message = "Due to security constraints, your access request cannot be authorized"),
         @io.swagger.annotations.ApiResponse(code = 500, message = "The server/Application is down. Please contact support team.") })
-        @CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class Lgacdb01 {
 
     @Autowired
@@ -97,13 +97,15 @@ public class Lgacdb01 {
 
     @Value("${api.LGACVS01.host}")
     private String LGACVS01_HOST;
+
     @Value("${api.LGACVS01.uri}")
-    private URI LGACVS01_URI;
+    private String LGACVS01_URI;
+
     @Value("${api.LGACDB02.host}")
     private String LGACDB02_HOST;
     @Value("${api.LGACDB02.uri}")
-    private URI LGACDB02_URI;
-   private String wsAbstime;
+    private String LGACDB02_URI;
+    private String wsAbstime;
 
     @PostMapping("/lgacdb01")
     public void main(@RequestBody Dfhcommarea payload) {
@@ -114,6 +116,7 @@ public class Lgacdb01 {
         // throw new LGCAException("LGCA");
 
         // }
+        log.warn("Payload:"+payload);
         BeanUtils.copyProperties(payload, dfhcommarea);
         wsRequiredCaLen = wsCaHeaderLen + wsRequiredCaLen;
         wsRequiredCaLen = wsCustomerLen + wsRequiredCaLen;
@@ -151,8 +154,11 @@ public class Lgacdb01 {
         log.debug("MethodobtainCustomerNumberstarted..");
         try {
             WebClient webClientBuilder = WebClient.create(GENACOUNT_HOST);
-            Mono<Long> genacountResp = webClientBuilder.post().uri(GENACOUNT_URI)
-                    .body(Mono.just(lastcustnum), Long.class).retrieve().bodyToMono(Long.class)
+            // Mono<Long> genacountResp = webClientBuilder.post().uri(GENACOUNT_URI)
+            // .body(Mono.just(lastcustnum), Long.class).retrieve().bodyToMono(Long.class)
+            // .timeout(Duration.ofMillis(10_000));
+
+            Mono<Long> genacountResp = webClientBuilder.get().uri(GENACOUNT_URI).retrieve().bodyToMono(Long.class)
                     .timeout(Duration.ofMillis(10_000));
             lastcustnum = genacountResp.block();
             log.debug("GENACOUNTResp:", genacountResp);
@@ -161,7 +167,7 @@ public class Lgacdb01 {
             throw new RuntimeException("GENACOUNT_HOST: issue");
         }
 
-        if (wsResp == 0) {
+        if (wsResp != 0) {
             lgacNcs = "NO";
         } else {
             db2CustomernumInt = (int) lastcustnum;
@@ -170,19 +176,15 @@ public class Lgacdb01 {
         log.debug("Method obtainCustomerNumber completed..");
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     public void insertCustomer() {
         log.debug("MethodinsertCustomerstarted..");
         emVariable.setEmSqlreq(" INSERT CUSTOMER");
         if (lgacNcs == "ON") {
-
-        }
-
         try {
             insertCustomerJpa.insertCustomerForDb2CustomernumIntAndCaFirstNameAndCaLastName(db2CustomernumInt,
                     dfhcommarea.getCaCustomerRequest().getCaFirstName(),
-                    dfhcommarea.getCaCustomerRequest().getCaLastName(), 
-                    dfhcommarea.getCaCustomerRequest().getCaDob(),
+                    dfhcommarea.getCaCustomerRequest().getCaLastName(), dfhcommarea.getCaCustomerRequest().getCaDob(),
                     dfhcommarea.getCaCustomerRequest().getCaHouseName(),
                     dfhcommarea.getCaCustomerRequest().getCaHouseNum(),
                     dfhcommarea.getCaCustomerRequest().getCaPostcode(),
@@ -193,6 +195,10 @@ public class Lgacdb01 {
             log.error(e);
             writeErrorMessage();
         }
+    }else
+    {
+        log.warn("Else block is missing");
+    }
 
         // //EXEC SQL
         // SET :DB2-CUSTOMERNUM-INT = IDENTITY_VAL_LOCAL()

@@ -4,6 +4,7 @@ import javax.persistence.QueryHint;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.repository.query.Param;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.jpa.repository.QueryHints;
 
@@ -11,6 +12,7 @@ import com.bluescript.demo.entity.CustomerEntity;
 import com.bluescript.demo.entity.CustomerEntity;
 
 public interface IinsertCustomerJpa extends JpaRepository<CustomerEntity, String> {
+    @Transactional
     @Modifying(clearAutomatically = true)
     @Query(value = "INSERT INTO CUSTOMER ( CUSTOMERNUMBER , FIRSTNAME , LASTNAME , DATEOFBIRTH , HOUSENAME , HOUSENUMBER , POSTCODE , PHONEMOBILE , PHONEHOME , EMAILADDRESS ) VALUES ( :db2CustomernumInt , :caFirstName , :caLastName , :caDob , :caHouseName , :caHouseNum , :caPostcode , :caPhoneMobile , :caPhoneHome , :caEmailAddress )", nativeQuery = true)
     void insertCustomerForDb2CustomernumIntAndCaFirstNameAndCaLastName(
