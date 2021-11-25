@@ -2769,3 +2769,167 @@ Stack trace:
 2021-11-25 19:05:29.934  INFO 34804 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2021-11-25 19:05:30.203  INFO 34804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7082 (http) with context path ''
 2021-11-25 19:05:30.420  INFO 34804 --- [main] com.bluescript.demo.lgacdb01Main         : Started lgacdb01Main in 3.541 seconds (JVM running for 3.951)
+2021-11-25 19:06:46.482  INFO 34804 --- [http-nio-7082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-25 19:06:46.482  INFO 34804 --- [http-nio-7082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-25 19:06:46.484  INFO 34804 --- [http-nio-7082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-11-25 19:06:46.589  WARN 34804 --- [http-nio-7082-exec-1] com.bluescript.demo.Lgacdb01             : Payload:Dfhcommarea(caRequestId=01ACUS, caReturnCode=0, caCustomerNum=0, caRequestSpecific=null, caCustomerRequest=CaCustomerRequest(caFirstName=BK, caLastName=null, caDob=2021-11-08T18:30:00.000Z, caHouseName=3, caHouseNum=32, caPostcode=3, caNumPolicies=0, caPhoneMobile=23, caPhoneHome=23, caEmailAddress=b@b.com, caPolicyData=null), caCustsecrRequest=null, caPolicyRequest=null)
+2021-11-25 19:06:47.102 DEBUG 34804 --- [http-nio-7082-exec-1] org.hibernate.SQL                        : 
+    INSERT 
+    INTO
+        CUSTOMER
+        ( CUSTOMERNUMBER , FIRSTNAME , LASTNAME , DATEOFBIRTH , HOUSENAME , HOUSENUMBER , POSTCODE , PHONEMOBILE , PHONEHOME , EMAILADDRESS ) 
+    VALUES
+        ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? )
+2021-11-25 19:06:49.255 ERROR 34804 --- [http-nio-7082-exec-1] com.bluescript.demo.Lgacdb01             : org.springframework.web.reactive.function.client.WebClientResponseException$InternalServerError: 500 Internal Server Error from POST http://localhost:6081/lgacvs01
+
+org.springframework.web.reactive.function.client.WebClientResponseException$InternalServerError: 500 Internal Server Error from POST http://localhost:6081/lgacvs01
+	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:201) ~[spring-webflux-5.3.3.jar:5.3.3]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	|_ checkpoint ⇢ 500 from POST http://localhost:6081/lgacvs01 [DefaultWebClient]
+Stack trace:
+		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:201) ~[spring-webflux-5.3.3.jar:5.3.3]
+		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:216) ~[spring-webflux-5.3.3.jar:5.3.3]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.4.2.jar:3.4.2]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.4.2.jar:3.4.2]
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:100) ~[reactor-core-3.4.2.jar:3.4.2]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:127) ~[reactor-core-3.4.2.jar:3.4.2]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.4.2.jar:3.4.2]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:295) ~[reactor-core-3.4.2.jar:3.4.2]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) ~[reactor-core-3.4.2.jar:3.4.2]
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1789) ~[reactor-core-3.4.2.jar:3.4.2]
+		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:159) ~[reactor-core-3.4.2.jar:3.4.2]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142) ~[reactor-core-3.4.2.jar:3.4.2]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:259) ~[reactor-core-3.4.2.jar:3.4.2]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:142) ~[reactor-core-3.4.2.jar:3.4.2]
+		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:389) ~[reactor-netty-core-1.0.3.jar:1.0.3]
+		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:396) ~[reactor-netty-core-1.0.3.jar:1.0.3]
+		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:452) ~[reactor-netty-core-1.0.3.jar:1.0.3]
+		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:664) ~[reactor-netty-http-1.0.3.jar:1.0.3]
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:94) ~[reactor-netty-core-1.0.3.jar:1.0.3]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103) ~[netty-codec-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324) ~[netty-codec-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296) ~[netty-codec-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) ~[netty-transport-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) ~[netty-common-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.58.Final.jar:4.1.58.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.58.Final.jar:4.1.58.Final]
+		at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+	Suppressed: java.lang.Exception: #block terminated with an error
+		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:99) ~[reactor-core-3.4.2.jar:3.4.2]
+		at reactor.core.publisher.Mono.block(Mono.java:1703) ~[reactor-core-3.4.2.jar:3.4.2]
+		at com.bluescript.demo.Lgacdb01.main(Lgacdb01.java:131) ~[classes/:na]
+		at com.bluescript.demo.Lgacdb01$$FastClassBySpringCGLIB$$e4ec466b.invoke(<generated>) ~[classes/:na]
+		at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.3.jar:5.3.3]
+		at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.3.3.jar:5.3.3]
+		at com.bluescript.demo.Lgacdb01$$EnhancerBySpringCGLIB$$43bb4d04.main(<generated>) ~[classes/:na]
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+		at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+		at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.3.jar:5.3.3]
+		at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.3.jar:5.3.3]
+		at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.3.jar:5.3.3]
+		at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.3.jar:5.3.3]
+		at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.3.jar:5.3.3]
+		at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.3.jar:5.3.3]
+		at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.3.jar:5.3.3]
+		at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.3.jar:5.3.3]
+		at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.3.jar:5.3.3]
+		at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.3.jar:5.3.3]
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+		at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.3.jar:5.3.3]
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.41.jar:4.0.FR]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.41.jar:9.0.41]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.3.jar:5.3.3]
+		at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.3.jar:5.3.3]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.3.jar:5.3.3]
+		at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.3.jar:5.3.3]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.3.jar:5.3.3]
+		at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.3.jar:5.3.3]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+		at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-11-25 19:38:40.091  WARN 34804 --- [http-nio-7082-exec-3] com.bluescript.demo.Lgacdb01             : Payload:Dfhcommarea(caRequestId=01ACUS, caReturnCode=0, caCustomerNum=0, caRequestSpecific=null, caCustomerRequest=CaCustomerRequest(caFirstName=bHARATHI t, caLastName=null, caDob=2029-10-08T18:30:00.000Z, caHouseName=EWA, caHouseNum=1231, caPostcode=2131231, caNumPolicies=0, caPhoneMobile=444412312, caPhoneHome=1232131, caEmailAddress=b@subb.com, caPolicyData=null), caCustsecrRequest=null, caPolicyRequest=null)
+2021-11-25 19:38:40.106 DEBUG 34804 --- [http-nio-7082-exec-3] org.hibernate.SQL                        : 
+    INSERT 
+    INTO
+        CUSTOMER
+        ( CUSTOMERNUMBER , FIRSTNAME , LASTNAME , DATEOFBIRTH , HOUSENAME , HOUSENUMBER , POSTCODE , PHONEMOBILE , PHONEHOME , EMAILADDRESS ) 
+    VALUES
+        ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? )
+2021-11-25 19:43:03.937  WARN 34804 --- [http-nio-7082-exec-5] com.bluescript.demo.Lgacdb01             : Payload:Dfhcommarea(caRequestId=01ACUS, caReturnCode=0, caCustomerNum=0, caRequestSpecific=null, caCustomerRequest=CaCustomerRequest(caFirstName=Bala, caLastName=null, caDob=2021-11-23T18:30:00.000Z, caHouseName=45, caHouseNum=5555, caPostcode=7777, caNumPolicies=0, caPhoneMobile=6666, caPhoneHome=88888, caEmailAddress=bala@blue.com, caPolicyData=null), caCustsecrRequest=null, caPolicyRequest=null)
+2021-11-25 19:43:03.950 DEBUG 34804 --- [http-nio-7082-exec-5] org.hibernate.SQL                        : 
+    INSERT 
+    INTO
+        CUSTOMER
+        ( CUSTOMERNUMBER , FIRSTNAME , LASTNAME , DATEOFBIRTH , HOUSENAME , HOUSENUMBER , POSTCODE , PHONEMOBILE , PHONEHOME , EMAILADDRESS ) 
+    VALUES
+        ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? )
+2021-11-25 19:52:26.494  WARN 34804 --- [http-nio-7082-exec-7] com.bluescript.demo.Lgacdb01             : Payload:Dfhcommarea(caRequestId=01ACUS, caReturnCode=0, caCustomerNum=0, caRequestSpecific=null, caCustomerRequest=CaCustomerRequest(caFirstName=whiteboard, caLastName=null, caDob=2021-11-16T18:30:00.000Z, caHouseName=3, caHouseNum=3, caPostcode=5, caNumPolicies=0, caPhoneMobile=3, caPhoneHome=6, caEmailAddress=a@a.com, caPolicyData=null), caCustsecrRequest=null, caPolicyRequest=null)
+2021-11-25 19:52:26.506 DEBUG 34804 --- [http-nio-7082-exec-7] org.hibernate.SQL                        : 
+    INSERT 
+    INTO
+        CUSTOMER
+        ( CUSTOMERNUMBER , FIRSTNAME , LASTNAME , DATEOFBIRTH , HOUSENAME , HOUSENUMBER , POSTCODE , PHONEMOBILE , PHONEHOME , EMAILADDRESS ) 
+    VALUES
+        ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? )
+2021-11-25 20:57:42.405  WARN 34804 --- [http-nio-7082-exec-9] com.bluescript.demo.Lgacdb01             : Payload:Dfhcommarea(caRequestId=string, caReturnCode=0, caCustomerNum=0, caRequestSpecific=string, caCustomerRequest=CaCustomerRequest(caFirstName=first, caLastName=string, caDob=string, caHouseName=string, caHouseNum=string, caPostcode=string, caNumPolicies=0, caPhoneMobile=string, caPhoneHome=string, caEmailAddress=string, caPolicyData=string), caCustsecrRequest=CaCustsecrRequest(caCustsecrPass=string, caCustsecrCount=string, caCustsecrState=string, caCustsecrData=string), caPolicyRequest=CaPolicyRequest(caPolicyNum=0, caPolicyCommon=CaPolicyCommon(caIssueDate=string, caExpiryDate=string, caLastchanged=string, caBrokerid=0, caBrokersref=string, caPayment=0), caPolicySpecific=string, caEndowment=CaEndowment(caEWithProfits=string, caEEquities=string, caEManagedFund=string, caEFundName=string, caETerm=0, caESumAssured=0, caELifeAssured=string, caEPaddingData=string), caHouse=CaHouse(caHPropertyType=string, caHBedrooms=0, caHValue=0, caHHouseName=string, caHHouseNumber=string, caHPostcode=string, caHFiller=string), caMotor=CaMotor(caMMake=string, caMModel=string, caMValue=0, caMRegnumber=string, caMColour=string, caMCc=0, caMManufactured=string, caMPremium=0, caMAccidents=0, caMFiller=string), caCommercial=CaCommercial(caBAddress=string, caBPostcode=string, caBLatitude=string, caBLongitude=string, caBCustomer=string, caBProptype=string, caBFireperil=0, caBFirepremium=0, caBCrimeperil=0, caBCrimepremium=0, caBFloodperil=0, caBFloodpremium=0, caBWeatherperil=0, caBWeatherpremium=0, caBStatus=0, caBRejectreason=string, caBFiller=string), caClaim=CaClaim(caCNum=0, caCDate=string, caCPaid=0, caCValue=0, caCCause=string, caCObservations=string, caCFiller=string)))
+2021-11-25 20:57:42.415 DEBUG 34804 --- [http-nio-7082-exec-9] org.hibernate.SQL                        : 
+    INSERT 
+    INTO
+        CUSTOMER
+        ( CUSTOMERNUMBER , FIRSTNAME , LASTNAME , DATEOFBIRTH , HOUSENAME , HOUSENUMBER , POSTCODE , PHONEMOBILE , PHONEHOME , EMAILADDRESS ) 
+    VALUES
+        ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? )
+2021-11-25 21:01:15.925  WARN 34804 --- [http-nio-7082-exec-1] com.bluescript.demo.Lgacdb01             : Payload:Dfhcommarea(caRequestId=string, caReturnCode=0, caCustomerNum=0, caRequestSpecific=string, caCustomerRequest=CaCustomerRequest(caFirstName=second, caLastName=string, caDob=string, caHouseName=string, caHouseNum=string, caPostcode=string, caNumPolicies=0, caPhoneMobile=string, caPhoneHome=string, caEmailAddress=string, caPolicyData=string), caCustsecrRequest=CaCustsecrRequest(caCustsecrPass=string, caCustsecrCount=string, caCustsecrState=string, caCustsecrData=string), caPolicyRequest=CaPolicyRequest(caPolicyNum=0, caPolicyCommon=CaPolicyCommon(caIssueDate=string, caExpiryDate=string, caLastchanged=string, caBrokerid=0, caBrokersref=string, caPayment=0), caPolicySpecific=string, caEndowment=CaEndowment(caEWithProfits=string, caEEquities=string, caEManagedFund=string, caEFundName=string, caETerm=0, caESumAssured=0, caELifeAssured=string, caEPaddingData=string), caHouse=CaHouse(caHPropertyType=string, caHBedrooms=0, caHValue=0, caHHouseName=string, caHHouseNumber=string, caHPostcode=string, caHFiller=string), caMotor=CaMotor(caMMake=string, caMModel=string, caMValue=0, caMRegnumber=string, caMColour=string, caMCc=0, caMManufactured=string, caMPremium=0, caMAccidents=0, caMFiller=string), caCommercial=CaCommercial(caBAddress=string, caBPostcode=string, caBLatitude=string, caBLongitude=string, caBCustomer=string, caBProptype=string, caBFireperil=0, caBFirepremium=0, caBCrimeperil=0, caBCrimepremium=0, caBFloodperil=0, caBFloodpremium=0, caBWeatherperil=0, caBWeatherpremium=0, caBStatus=0, caBRejectreason=string, caBFiller=string), caClaim=CaClaim(caCNum=0, caCDate=string, caCPaid=0, caCValue=0, caCCause=string, caCObservations=string, caCFiller=string)))
+2021-11-25 21:01:15.937 DEBUG 34804 --- [http-nio-7082-exec-1] org.hibernate.SQL                        : 
+    INSERT 
+    INTO
+        CUSTOMER
+        ( CUSTOMERNUMBER , FIRSTNAME , LASTNAME , DATEOFBIRTH , HOUSENAME , HOUSENUMBER , POSTCODE , PHONEMOBILE , PHONEHOME , EMAILADDRESS ) 
+    VALUES
+        ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? )
