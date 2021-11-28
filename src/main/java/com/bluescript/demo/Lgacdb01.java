@@ -116,7 +116,7 @@ public class Lgacdb01 {
         // throw new LGCAException("LGCA");
 
         // }
-        log.warn("Payload:"+payload);
+        log.warn("Payload:" + payload);
         BeanUtils.copyProperties(payload, dfhcommarea);
         wsRequiredCaLen = wsCaHeaderLen + wsRequiredCaLen;
         wsRequiredCaLen = wsCustomerLen + wsRequiredCaLen;
@@ -133,7 +133,7 @@ public class Lgacdb01 {
             log.error(e);
         }
         cdb2Area.setD2CustomerNum(db2CustomernumInt);
-        cdb2Area.setD2RequestId("02ACUS");
+        cdb2Area.setD2RequestId("0000");
         cdb2Area.setD2CustsecrPass("5732FEC825535EEAFB8FAC50FEE3A8AA");
         cdb2Area.setD2CustsecrCount("0000");
         cdb2Area.setD2CustsecrState("N");
@@ -181,24 +181,24 @@ public class Lgacdb01 {
         log.debug("MethodinsertCustomerstarted..");
         emVariable.setEmSqlreq(" INSERT CUSTOMER");
         if (lgacNcs == "ON") {
-        try {
-            insertCustomerJpa.insertCustomerForDb2CustomernumIntAndCaFirstNameAndCaLastName(db2CustomernumInt,
-                    dfhcommarea.getCaCustomerRequest().getCaFirstName(),
-                    dfhcommarea.getCaCustomerRequest().getCaLastName(), dfhcommarea.getCaCustomerRequest().getCaDob(),
-                    dfhcommarea.getCaCustomerRequest().getCaHouseName(),
-                    dfhcommarea.getCaCustomerRequest().getCaHouseNum(),
-                    dfhcommarea.getCaCustomerRequest().getCaPostcode(),
-                    dfhcommarea.getCaCustomerRequest().getCaPhoneHome(),
-                    dfhcommarea.getCaCustomerRequest().getCaPhoneMobile(),
-                    dfhcommarea.getCaCustomerRequest().getCaEmailAddress());
-        } catch (Exception e) {
-            log.error(e);
-            writeErrorMessage();
+            try {
+                insertCustomerJpa.insertCustomerForDb2CustomernumIntAndCaFirstNameAndCaLastName(db2CustomernumInt,
+                        dfhcommarea.getCaCustomerRequest().getCaFirstName(),
+                        dfhcommarea.getCaCustomerRequest().getCaLastName(),
+                        dfhcommarea.getCaCustomerRequest().getCaDob(),
+                        dfhcommarea.getCaCustomerRequest().getCaHouseName(),
+                        dfhcommarea.getCaCustomerRequest().getCaHouseNum(),
+                        dfhcommarea.getCaCustomerRequest().getCaPostcode(),
+                        dfhcommarea.getCaCustomerRequest().getCaPhoneHome(),
+                        dfhcommarea.getCaCustomerRequest().getCaPhoneMobile(),
+                        dfhcommarea.getCaCustomerRequest().getCaEmailAddress());
+            } catch (Exception e) {
+                log.error(e);
+                writeErrorMessage();
+            }
+        } else {
+            log.warn("Else block is missing");
         }
-    }else
-    {
-        log.warn("Else block is missing");
-    }
 
         // //EXEC SQL
         // SET :DB2-CUSTOMERNUM-INT = IDENTITY_VAL_LOCAL()
