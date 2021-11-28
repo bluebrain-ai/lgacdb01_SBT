@@ -133,7 +133,7 @@ public class Lgacdb01 {
             log.error(e);
         }
         cdb2Area.setD2CustomerNum(db2CustomernumInt);
-        cdb2Area.setD2RequestId("0000");
+        cdb2Area.setD2RequestId("02ACUS");
         cdb2Area.setD2CustsecrPass("5732FEC825535EEAFB8FAC50FEE3A8AA");
         cdb2Area.setD2CustsecrCount("0000");
         cdb2Area.setD2CustsecrState("N");
