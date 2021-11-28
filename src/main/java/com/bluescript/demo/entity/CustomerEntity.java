@@ -3,6 +3,7 @@ package com.bluescript.demo.entity;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -26,6 +27,7 @@ public class CustomerEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @GeneratedValue
     @Column(name = "CUSTOMERNUMBER")
     private int customerNumber;
     @Column(name = "FIRSTNAME")
