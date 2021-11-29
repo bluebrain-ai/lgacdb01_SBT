@@ -21,4 +21,13 @@ public interface IinsertCustomerJpa extends JpaRepository<CustomerEntity, String
             @Param("caHouseName") String caHouseName, @Param("caHouseNum") String caHouseNum,
             @Param("caPostcode") String caPostcode, @Param("caPhoneMobile") String caPhoneMobile,
             @Param("caPhoneHome") String caPhoneHome, @Param("caEmailAddress") String caEmailAddress);
+
+    @Transactional
+    @Modifying(clearAutomatically = true)
+    @Query(value = "INSERT INTO CUSTOMER ( CUSTOMERNUMBER , FIRSTNAME , LASTNAME , DATEOFBIRTH , HOUSENAME , HOUSENUMBER , POSTCODE , PHONEMOBILE , PHONEHOME , EMAILADDRESS ) VALUES ( DEFAULT, :caFirstName , :caLastName , :caDob , :caHouseName , :caHouseNum , :caPostcode , :caPhoneMobile , :caPhoneHome , :caEmailAddress )", nativeQuery = true)
+    void insertCustomerForDefaultAndCaFirstNameAndCaLastName(@Param("caFirstName") String caFirstName,
+            @Param("caLastName") String caLastName, @Param("caDob") String caDob,
+            @Param("caHouseName") String caHouseName, @Param("caHouseNum") String caHouseNum,
+            @Param("caPostcode") String caPostcode, @Param("caPhoneMobile") String caPhoneMobile,
+            @Param("caPhoneHome") String caPhoneHome, @Param("caEmailAddress") String caEmailAddress);
 }

@@ -1,5 +1,7 @@
 com\bluescript\demo\model\CaCustsecrRequest.class
 com\bluescript\demo\model\CaPolicyCommon.class
+com\bluescript\demo\entity\IdentifyFuncEntity.class
+com\bluescript\demo\jpa\IidentityValLocalFuncJpa.class
 com\bluescript\demo\model\Db2Customer.class
 com\bluescript\demo\model\EmVariable.class
 com\bluescript\demo\model\CaMotor.class

@@ -35,6 +35,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 import io.swagger.annotations.ApiResponses;
 
+import com.bluescript.demo.jpa.IidentityValLocalFuncJpa;
 import com.bluescript.demo.jpa.IinsertCustomerJpa;
 import com.bluescript.demo.model.WsHeader;
 import com.bluescript.demo.model.ErrorMsg;
@@ -106,6 +107,8 @@ public class Lgacdb01 {
     @Value("${api.LGACDB02.uri}")
     private String LGACDB02_URI;
     private String wsAbstime;
+    @Autowired
+    private IidentityValLocalFuncJpa identyValLocal;
 
     @PostMapping("/lgacdb01")
     public void main(@RequestBody Dfhcommarea payload) {
@@ -154,10 +157,6 @@ public class Lgacdb01 {
         log.debug("MethodobtainCustomerNumberstarted..");
         try {
             WebClient webClientBuilder = WebClient.create(GENACOUNT_HOST);
-            // Mono<Long> genacountResp = webClientBuilder.post().uri(GENACOUNT_URI)
-            // .body(Mono.just(lastcustnum), Long.class).retrieve().bodyToMono(Long.class)
-            // .timeout(Duration.ofMillis(10_000));
-
             Mono<Long> genacountResp = webClientBuilder.get().uri(GENACOUNT_URI).retrieve().bodyToMono(Long.class)
                     .timeout(Duration.ofMillis(10_000));
             lastcustnum = genacountResp.block();
@@ -197,15 +196,27 @@ public class Lgacdb01 {
                 writeErrorMessage();
             }
         } else {
-            log.warn("Else block is missing");
+            try {
+                insertCustomerJpa.insertCustomerForDefaultAndCaFirstNameAndCaLastName(
+                        dfhcommarea.getCaCustomerRequest().getCaFirstName(),
+                        dfhcommarea.getCaCustomerRequest().getCaLastName(),
+                        dfhcommarea.getCaCustomerRequest().getCaDob(),
+                        dfhcommarea.getCaCustomerRequest().getCaHouseName(),
+                        dfhcommarea.getCaCustomerRequest().getCaHouseNum(),
+                        dfhcommarea.getCaCustomerRequest().getCaPostcode(),
+                        dfhcommarea.getCaCustomerRequest().getCaPhoneHome(),
+                        dfhcommarea.getCaCustomerRequest().getCaPhoneMobile(),
+                        dfhcommarea.getCaCustomerRequest().getCaEmailAddress());
+            } catch (Exception e) {
+                dfhcommarea.setCaReturnCode(90);
+                writeErrorMessage();
+
+            }
+
+            db2CustomernumInt = identyValLocal.getDb2CustomernumInt();
         }
 
-        // //EXEC SQL
-        // SET :DB2-CUSTOMERNUM-INT = IDENTITY_VAL_LOCAL()
-        // END-EXEC
-
         dfhcommarea.setCaCustomerNum(db2CustomernumInt);
-
         log.debug("Method insertCustomer completed..");
     }
 
