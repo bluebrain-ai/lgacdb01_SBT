@@ -14,6 +14,6 @@ import org.springframework.data.jpa.repository.QueryHints;
 public interface IidentityValLocalFuncJpa extends JpaRepository<IdentifyFuncEntity, Double> {
 
     // @Query(value = "SELECT IDENTITY_VAL_LOCAL() FROM DUAL", nativeQuery = true)
-    @Query(value = "SELECT CURRVAL('') FROM DUAL", nativeQuery = true)
+    @Query(value = "SELECT CURRVAL('customer_seq') FROM DUAL", nativeQuery = true)
     int getDb2CustomernumInt();
 }

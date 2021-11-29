@@ -111,7 +111,7 @@ public class Lgacdb01 {
     private IidentityValLocalFuncJpa identyValLocal;
 
     @PostMapping("/lgacdb01")
-    public void main(@RequestBody Dfhcommarea payload) {
+    public ResponseEntity<Dfhcommarea> main(@RequestBody Dfhcommarea payload) {
         // if( eibcalen == 0 )
         // {
         // errorMsg.setEmVariable(" NO COMMAREA RECEIVED"); writeErrorMessage();
@@ -150,23 +150,26 @@ public class Lgacdb01 {
             log.error(e);
             throw new RuntimeException("LGACDB02_HOST connection issue");
         }
-
+        return new ResponseEntity<>(dfhcommarea, HttpStatus.OK);
     }
 
     public void obtainCustomerNumber() {
         log.debug("MethodobtainCustomerNumberstarted..");
         try {
+
             WebClient webClientBuilder = WebClient.create(GENACOUNT_HOST);
             Mono<Long> genacountResp = webClientBuilder.get().uri(GENACOUNT_URI).retrieve().bodyToMono(Long.class)
                     .timeout(Duration.ofMillis(10_000));
             lastcustnum = genacountResp.block();
+            System.out.println("inside gena");
             log.debug("GENACOUNTResp:", genacountResp);
         } catch (Exception e) {
             log.error(e);
-            throw new RuntimeException("GENACOUNT_HOST: issue");
+            wsResp = 1;
         }
 
         if (wsResp != 0) {
+            System.out.println("Cusi seq");
             lgacNcs = "NO";
         } else {
             db2CustomernumInt = (int) lastcustnum;
@@ -181,6 +184,7 @@ public class Lgacdb01 {
         emVariable.setEmSqlreq(" INSERT CUSTOMER");
         if (lgacNcs == "ON") {
             try {
+                System.out.println("inside gena sceario");
                 insertCustomerJpa.insertCustomerForDb2CustomernumIntAndCaFirstNameAndCaLastName(db2CustomernumInt,
                         dfhcommarea.getCaCustomerRequest().getCaFirstName(),
                         dfhcommarea.getCaCustomerRequest().getCaLastName(),
@@ -197,6 +201,7 @@ public class Lgacdb01 {
             }
         } else {
             try {
+                System.out.println("Cusi seq scenario");
                 insertCustomerJpa.insertCustomerForDefaultAndCaFirstNameAndCaLastName(
                         dfhcommarea.getCaCustomerRequest().getCaFirstName(),
                         dfhcommarea.getCaCustomerRequest().getCaLastName(),
